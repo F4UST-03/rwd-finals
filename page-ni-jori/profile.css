@@ -1,0 +1,409 @@
+$defaultSeconds: 3s;
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.flex-container {
+	position: absolute;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	@media screen and (max-width: 768px) {
+		flex-direction: column;
+	}
+}
+
+.flex-title {
+	color: #f1f1f1;
+	position: relative;
+	font-size: 4vw;
+	margin-top: 5%;
+	text-align: center;
+	transform: rotate(90deg);
+	top: 15%;
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+
+	@media screen and (max-width: 768px) {
+		transform: rotate(0deg) !important;
+	}
+}
+
+.flex-slide:hover h1 {
+	color: #f1f1f1;
+	position: relative;
+	margin: auto;
+	text-align: center;
+	transform: rotate(0deg);
+	top: 50px;
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+
+	@media screen and (max-width: 768px) {
+		transform: rotate(0deg) !important;
+		top: 10px;
+		font-size: 100%;
+		margin: 2px;
+	}
+}
+
+.flex-slide:hover p {
+	color: #f1f1f1;
+	position: relative;
+	margin: 0 7%;
+	text-align: center;
+	transform: rotate(0deg);
+	top: 15\0px;
+	font-size: 120%;
+	padding: 5%;
+	border: 2px ridge;
+	background-color: rgba(0, 0, 0, 0.5);
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+	visibility: visible;
+
+	@media screen and (max-width: 768px) {
+		transform: rotate(0deg) !important;
+		font-size: 70%;
+		margin: 0 7%;
+		top: 65px;
+		font-size: 75%;
+		padding: 3%;
+		border: 2px ridge;
+	}
+}
+
+.flex-slide:hover h3 {
+	color: #f1f1f1;
+	position: relative;
+	margin: 0 7%;
+	text-align: center;
+	transform: rotate(0deg);
+	top: 120px;
+	font-size: 200%;
+	padding: 3%;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-top: 1px ridge;
+	border-left: 1px ridge;
+	border-right: 1px ridge;
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+	visibility: visible;
+
+	@media screen and (max-width: 768px) {
+		transform: rotate(0deg) !important;
+		font-size: 90%;
+		top: 30px;
+		font-size: 110%;
+		padding: 3%;
+		border: 2px ridge;
+	}
+}
+
+.flex-slide:hover h5 {
+	font-size: 150%;
+	color: #f1f1f1;
+	position: relative;
+	margin: 0 7%;
+	text-align: center;
+	transform: rotate(0deg);
+	top: 120px;
+	font-size: 130%;
+	padding: 2%;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-bottom: 1px solid;
+	border-left: 1px solid;
+	border-right: 1px solid;
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+	visibility: visible;
+
+	@media screen and (max-width: 768px) {
+		transform: rotate(0deg) !important;
+		font-size: 90%;
+		top: 35px;
+		font-size: 90%;
+		padding: 2%;
+		border: 2px ridge;
+	}
+}
+
+
+.flex-about p, h3, h5 {
+	visibility: hidden;
+	color: #f1f1f1;
+	position: relative;
+	text-align: center;
+	transform: rotate(90deg);
+	top: 200px;
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+
+	@media screen and (max-width: 768px) {
+		transform: rotate(0deg) !important;
+	}
+}
+
+.flex-slide {
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	cursor: pointer;
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+	@media screen and (max-width: 768px) {
+		overflow: auto;
+		overflow-x: hidden;
+	}
+}
+
+.flex-slide:hover {
+	-webkit-flex-grow: 2;
+	flex-grow: 2;
+}
+
+.ryan:not(:hover) {
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('resources/ryan.jpg');
+	background-size: 50%;
+	background-position: left;
+	background-attachment: fixed;
+	background-repeat: 2;
+}
+
+.rasheed:not(:hover) {
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('resources/Rasheed7.jpg');
+	background-size: 75%;
+	background-position: left center;
+	background-attachment: fixed;
+	background-repeat: 2;
+}
+
+.czarina:not(:hover) {
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('resources/czarina.jpg');
+	background-size: 67%;
+	background-position: right center;
+	background-attachment: fixed;
+	background-repeat: 2;
+}
+
+.jori:not(:hover) {
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('resources/jorilyn3.png');
+	background-size: 46%;
+	background-position: center right;
+	background-attachment: fixed;
+	background-repeat: 2;
+}
+
+
+/* HOVERED */
+.ryan:hover {
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('resources/ryan.jpg');
+	background-size: 55%;
+	background-position: left center;
+	background-attachment: fixed;
+	background-repeat: 2;
+}
+
+.rasheed:hover {
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('resources/Rasheed7.jpg');
+	background-size: 80%;
+	background-position: left center;
+	background-attachment: fixed;
+	background-repeat: 2;
+}
+
+.czarina:hover {
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('resources/czarina.jpg');
+	background-size: 70%;
+	background-position: right center;
+	background-attachment: fixed;
+	background-repeat: 2;
+}
+
+.jori:hover {
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('resources/jorilyn3.png');
+	background-size: 50%;
+	background-position: center right;
+	background-attachment: fixed;
+	background-repeat: 2;
+}
+
+
+
+@media screen and (max-width: 768px) {
+	.ryan:not(:hover) {
+		background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('media-query-img/ryan7.png');
+		background-size: 90%;
+		background-position: top;
+		background-attachment: fixed;
+		background-repeat: 2;
+	}
+	
+	.rasheed:not(:hover) {
+		background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('media-query-img/Rasheed3.jpg');
+		background-size: 90%;
+		background-position: center;
+		background-attachment: fixed;
+		background-repeat: 2;
+	}
+	
+	.czarina:not(:hover) {
+		background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('media-query-img/czarina8.png');
+		background-size: 100%;
+		background-position: bottom center;
+		background-attachment: fixed;
+		background-repeat: 2;
+	}
+	
+	.jori:not(:hover) {
+		background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('media-query-img/jorilyn.jpg');
+		background-size: 85%;
+		background-position: bottom;
+		background-attachment: fixed;
+		background-repeat: 2;
+	}
+
+	
+
+	.ryan:hover {
+		background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('media-query-img/ryan7.png');
+		background-size: 100%;
+		background-position: top;
+		background-attachment: fixed;
+		background-repeat: 2;
+	}
+	
+	.rasheed:hover {
+		background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('media-query-img/Rasheed3.jpg');
+		background-size: 95%;
+		background-position: center;
+		background-attachment: fixed;
+		background-repeat: 2;
+	}
+	
+	.czarina:hover {
+		background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('media-query-img/czarina8.png');
+		background-size: 100%;
+		background-position: bottom center;
+		background-attachment: fixed;
+		background-repeat: 2;
+	}
+	
+	.jori:hover {
+		background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('media-query-img/jorilyn.jpg');
+		background-size: 90%;
+		background-position: bottom;
+		background-attachment: fixed;
+		background-repeat: 2;
+	}
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+	body {
+		margin: 0;
+		padding: 0;
+	}
+
+	.flex-slide p, h3, h5 {
+		font-size: 0;
+	}
+
+}
+
+@media screen and (max-width: 300px) {
+	.flex-title {
+		margin: 0;
+	}
+
+	.ryan:not(:hover) {
+		background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('media-query-img/ryan7.png');
+		background-size: 85%;
+		background-position: top;
+		background-attachment: fixed;
+		background-repeat: 2;
+	}
+	
+	.rasheed:not(:hover) {
+		background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('media-query-img/Rasheed3.jpg');
+		background-size: 120%;
+		background-position: center;
+		background-attachment: fixed;
+		background-repeat: 2;
+	}
+	
+	.czarina:not(:hover) {
+		background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('media-query-img/czarina8.png');
+		background-size: 120%;
+		background-position: bottom center;
+		background-attachment: fixed;
+		background-repeat: 2;
+	}
+	
+	.jori:not(:hover) {
+		background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('media-query-img/jorilyn.jpg');
+		background-size: 90%;
+		background-position: bottom;
+		background-attachment: fixed;
+		background-repeat: 2;
+	}
+
+	
+
+	.ryan:hover {
+		background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('media-query-img/ryan7.png');
+		background-size: 100%;
+		background-position: top;
+		background-attachment: fixed;
+		background-repeat: 2;
+	}
+	
+	.rasheed:hover {
+		background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('media-query-img/Rasheed3.jpg');
+		background-size: 140%;
+		background-position: center;
+		background-attachment: fixed;
+		background-repeat: 2;
+	}
+	
+	.czarina:hover {
+		background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('media-query-img/czarina8.png');
+		background-size: 140%;
+		background-position: bottom center;
+		background-attachment: fixed;
+		background-repeat: 2;
+	}
+	
+	.jori:hover {
+		background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('media-query-img/jorilyn.jpg');
+		background-size: 130%;
+		background-position: bottom;
+		background-attachment: fixed;
+		background-repeat: 2;
+	}
+}
