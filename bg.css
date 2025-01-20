@@ -1,0 +1,173 @@
+body {
+    background-color: black;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    margin: 5vmax;
+    animation: rotating 2s linear infinite paused;
+
+
+}
+
+.page img {
+    display: block;
+    opacity: 0.5;
+    height: 25vmax;
+}
+
+.page img {
+    animation: rotating 0.1s linear infinite paused;
+}
+
+.page img:hover {
+    animation: rotating 0.5s linear infinite;
+}
+
+a {
+    display: block;
+    align-self: center;
+    color: rgb(99, 195, 255);
+    text-decoration: none;
+    font-family: lucida handwriting;
+    font-size: 20px;
+    margin: 10px;
+    transition: text-shadow 0.3s;
+}
+
+a:hover {
+    text-shadow: 0 0 10px rgb(99, 195, 255), 0 0 20px rgb(99, 195, 255);
+}
+
+.star {
+    position: absolute;
+    width: var(--size, 20px);
+    height: var(--size, 20px);
+    background-color: rgb(99, 195, 255);
+    clip-path: polygon(
+        50% 0%, 60% 40%, 100% 50%, 60% 60%, 
+        50% 100%, 40% 60%, 0% 50%, 40% 40%
+    );
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 
+                0 0 30px rgba(0, 255, 255, 0.6), 
+                0 0 40px rgba(0, 255, 255, 0.4);
+    animation: shooting-star var(--duration, 3s) ease-in-out var(--delay, 0s) infinite;
+}        
+
+.bgstar {
+    position: absolute;
+    width: var(--size, 20px);
+    height: var(--size, 20px);
+    background-color: rgb(99, 195, 255);
+    clip-path: polygon(
+        50% 0%, 60% 40%, 100% 50%, 60% 60%, 
+        50% 100%, 40% 60%, 0% 50%, 40% 40%
+    );
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 
+                0 0 30px rgba(0, 255, 255, 0.6), 
+                0 0 40px rgba(0, 255, 255, 0.4);
+    animation: glowing-star var(--duration, 3s) ease-in-out var(--delay, 0s) infinite alternate;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    font-family: 'Lucida Handwriting', cursive;
+    display: inline-block;
+    color: aliceblue;
+    text-shadow: 0 0 10px purple, 0 0 20px rgb(94, 94, 225);
+    font-size: 7rem;
+    margin-bottom: 20px;
+}
+
+div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    justify-self: center;
+    z-index: 1;
+}
+
+a {
+    flex: 1 1 20px;
+    color: rgb(99, 195, 255);
+    text-decoration: none;
+    font-family: cursive;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.22);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.6px);
+    -webkit-backdrop-filter: blur(2.6px);
+}
+
+a:hover {
+    background-color: rgb(99, 195, 255);
+    color: black;
+    text-shadow: none;
+}
+
+@keyframes shooting-star {
+    0% {
+        transform: translate(0, 0) rotate(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(calc(100vw + 100px), calc(100vh + 100px)) rotate(180deg);
+        opacity: 0;
+    }
+}
+
+@keyframes glowing-star {
+    0% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
+        rotate: 360deg;
+    }
+}
+
+@keyframes rotating {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
+}
+
+@media (max-width: 600px) {
+    a {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .star {
+        width: calc(var(--size, 20px) / 1.5);
+        height: calc(var(--size, 20px) / 1.5);
+    }
+}
